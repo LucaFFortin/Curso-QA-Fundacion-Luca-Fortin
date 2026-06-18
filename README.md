@@ -1,4 +1,4 @@
-# Curso QA - Fundación Luca Fortín
+# Curso QA - Fundación Empujar / UTN
 
 Este repositorio contiene materiales, ejercicios y documentación relacionados con el curso de **Quality Assurance (QA)**, desarrollado en colaboración con la Fundación y la Universidad Tecnológica Nacional (UTN).  
 El objetivo es brindar una base sólida en **testing manual y automatizado**, buenas prácticas de QA y metodologías ágiles aplicadas al desarrollo de software.
