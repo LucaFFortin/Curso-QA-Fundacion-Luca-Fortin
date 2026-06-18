@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test'
 const URL = "https://www.saucedemo.com/"
 const USERNAME = "standard_user"
 const PASSWORD = "secret_sauce"
+const LOCKED_OUT_USER = "locked_out_user"
 
 test("Succesfull login", async ({page}) => {
     await page.goto(URL)
@@ -12,6 +13,7 @@ test("Succesfull login", async ({page}) => {
     await page.getByPlaceholder("Password").fill(PASSWORD)
 
     let button = page.getByRole("button")
+
     expect(button).toHaveText("Login")
 
     await button.click()
@@ -40,7 +42,7 @@ test("Failed login, invalid password", async ({page}) => {
 test("Failed login, user locked out", async ({page}) => {
     await page.goto(URL)
 
-    await page.getByPlaceholder("Username").fill("locked_out_user")
+    await page.getByPlaceholder("Username").fill(LOCKED_OUT_USER)
 
     await page.getByPlaceholder("Password").fill(PASSWORD)
 
